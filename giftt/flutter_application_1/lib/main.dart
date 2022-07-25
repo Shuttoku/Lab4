@@ -7,7 +7,9 @@ void main() {
       appBar: AppBar(
         title: Text("Hello Flutter ค่ะ"),
       ),
+      body: Text("สวัสดี"),
     ),
+    theme: ThemeData(primarySwatch: Colors.lime),
   );
   runApp(app);
 }
