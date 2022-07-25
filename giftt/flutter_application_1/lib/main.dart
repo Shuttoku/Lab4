@@ -43,14 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Hello Flutter"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
           children:data,
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed:addNumber, 
-        child:Icon(Icons.add),
       ),
     );
   }
@@ -58,5 +53,14 @@ void addNumber() {
   setState(() {
     number++;
   });
+}
+ List<Widget> getData(int count){
+
+  List<Widget> data = [];
+    for(var i = 0 ;i<count;i++){
+        data.add(Text("รายการที่ ${i+1}"));
+
+ }
+ return data;
 }
 }
