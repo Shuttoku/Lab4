@@ -14,10 +14,14 @@ class MyApp extends StatelessWidget {
           title: Text("Hello Flutter"),
         ),
         body: Center(
-            child: Image(
-          image: NetworkImage(
-              "https://tse4.mm.bing.net/th?id=OIP.FnZeUJ49EZEC1bhdSpcdrgHaEK&pid=Api&P=0"),
-        )),
+          child: Column(
+            children: [
+                Text("Hi every one"),
+                Text("Hi every one"),
+                Text("Hi every one"),
+            ],
+          ),
+        ),
       ),
       theme: ThemeData(primarySwatch: Colors.lime),
     );
