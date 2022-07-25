@@ -45,7 +45,7 @@ int number= 0;
         floatingActionButton: FloatingActionButton(
           onPressed:() {
             setState(() {
-              number++;
+              number=number+10;
             });
           },
           child: Icon(Icons.add),
