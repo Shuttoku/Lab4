@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+                Text("Hi every one"),
+                Text("Hi every one"),
+                Text("Hi every one"),
+                Text("Hi every one"),
                 Text("Hi every one"),
                 Text("Hi every one"),
                 Text("Hi every one"),
