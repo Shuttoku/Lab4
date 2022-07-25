@@ -4,31 +4,41 @@ void main() {
   runApp(MyApp());
 }
 
+//สร้าง widget
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My App",
-      home: Scaffold(
+      home: MyHomePage(),
+      theme: ThemeData(primarySwatch: Colors.lime),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() =>  _MyHomePageState();
+}
+
+class  _MyHomePageState extends State<MyHomePage> {
+int number= 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         appBar: AppBar(
           title: Text("Hello Flutter"),
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-                Text("Hi every one"),
-                Text("Hi every one"),
-                Text("Hi every one"),
-                Text("Hi every one"),
-                Text("Hi every one"),
-                Text("Hi every one"),
-                Text("Hi every one"),
+                Text("กดปุ่มเพื่อเพิ่มจำนวน "),
+                Text("$number"),
             ],
           ),
         ),
-      ),
-      theme: ThemeData(primarySwatch: Colors.lime),
-    );
-  }
+    );  
+ }
 }
