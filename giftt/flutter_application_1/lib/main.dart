@@ -43,8 +43,12 @@ int number= 0;
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed:() {},
-          child: Text("add"),
+          onPressed:() {
+            setState(() {
+              number++;
+            });
+          },
+          child: Icon(Icons.add),
         ),
     );  
  }
