@@ -34,6 +34,10 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: 60),
             ),
             );
+    data.add(Text("hi bro"));
+    for(var i = 0 ;i<10;i++){
+        data.add(Text("flutter"));
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Hello Flutter"),
