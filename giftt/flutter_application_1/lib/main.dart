@@ -35,7 +35,10 @@ int number= 0;
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
                 Text("กดปุ่มเพื่อเพิ่มจำนวน "),
-                Text("$number"),
+                Text(
+                number.toString(),
+                style:  TextStyle(fontSize: 60),
+                ),
             ],
           ),
         ),
