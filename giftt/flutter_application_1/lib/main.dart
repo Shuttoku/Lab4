@@ -40,11 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello Flutter"),
+        //หัวเมนู
+        title: Text("เมนู",
+        style: TextStyle(fontSize: 30),),
       ),
       body: Center(
         child: ListView(
-          children: getData(15),
+          children: getData(5),
         ),
       ),
     );
@@ -58,12 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
 //เตรียมข้อมูล
   List<Widget> getData(int count) {
+    //text wiget
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text(
-        "เมนูที่ ${i + 1}",
-        style: TextStyle(fontSize: 30),
-      ));
+      var menu = ListTile(title:Text("เมนูที่ $i"));
+      data.add(menu);
     }
     return data;
   }
