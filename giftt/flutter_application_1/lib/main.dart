@@ -33,23 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> data = [];
-    data.add(Text("กดปุ่มเพื่อเพิ่มจำนวน"));
-    data.add(
-      Text(
-        number.toString(),
-        style: TextStyle(fontSize: 60),
-      ),
-    );
-    data.add(Text("hi bro"));
-    for (var i = 0; i < 10; i++) {
-      data.add(Text("flutter"));
-    }
     return Scaffold(
       appBar: AppBar(
         //หัวเมนู
         title: Text(
-          "เมนูอาหาร",
+          "เลือกเมนูอาหาร",
           style: TextStyle(fontSize: 30),
         ),
       ),
@@ -57,7 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.builder(
         itemCount: menu.length,
         itemBuilder: (BuildContext context,int index) {
-          return ListTile(title: Text("เมนู ${index+1}"),);
+          FoodMenu food=menu[index];
+          return ListTile(title: Text(food.name),
+          );
         }));
       }
 
