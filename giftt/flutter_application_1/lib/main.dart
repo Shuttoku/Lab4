@@ -41,12 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         //หัวเมนู
-        title: Text("เมนู",
-        style: TextStyle(fontSize: 30),),
+        title: Text(
+          "เมนู",
+          style: TextStyle(fontSize: 30),
+        ),
       ),
       body: Center(
         child: ListView(
-          children: getData(5),
+          children: getData(20),
         ),
       ),
     );
@@ -63,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
     //text wiget
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      var menu = ListTile(title:Text("เมนูที่ $i"));
+      var menu = ListTile(title: Text("เมนูที่ ${i + 1}",style: TextStyle(fontSize: 25),),
+      subtitle: Text("เมนูที่อาหาร ${i + 1}"),);
       data.add(menu);
     }
     return data;
