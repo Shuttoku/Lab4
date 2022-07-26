@@ -28,7 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("บัญชีของฉัน",style: TextStyle(fontSize: 20,color: Colors.lime,fontWeight: FontWeight.bold),),
+          title: Text(
+            "บัญชีของฉัน",
+            style: TextStyle(
+                fontSize: 20, color: Colors.lime, fontWeight: FontWeight.bold),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -43,13 +47,86 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("ยอดคงเหลือ",style: TextStyle(fontSize: 20,color: Colors.indigo,fontWeight: FontWeight.bold),),
-                    Text("11500",style: TextStyle(fontSize: 15,color: Colors.indigo,fontWeight: FontWeight.bold),)
+                    Text(
+                      "ยอดคงเหลือ",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.indigo,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "11500",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.indigo,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
                   ],
                 ),
               ),
-
-             /* Container(
+              //2
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "รายรับ",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "150",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "รายจ่าย",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "80",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              /* Container(
                  padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(color: Colors.lightBlue,borderRadius: BorderRadius.circular(10)),
                 height: 100,
