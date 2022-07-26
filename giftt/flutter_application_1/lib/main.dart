@@ -24,19 +24,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int number = 0;
 
- @override
- Widget build(BuildContext context){
- List<Widget> data = [];
-  data.add(Text("กดปุ่มเพื่อเพิ่มจำนวน"));
-  data.add(
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 60),
-            ),
-            );
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> data = [];
+    data.add(Text("กดปุ่มเพื่อเพิ่มจำนวน"));
+    data.add(
+      Text(
+        number.toString(),
+        style: TextStyle(fontSize: 60),
+      ),
+    );
     data.add(Text("hi bro"));
-    for(var i = 0 ;i<10;i++){
-        data.add(Text("flutter"));
+    for (var i = 0; i < 10; i++) {
+      data.add(Text("flutter"));
     }
     return Scaffold(
       appBar: AppBar(
@@ -44,23 +44,27 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(
-          children:data,
+          children: getData(15),
         ),
       ),
     );
   }
-void addNumber() {
-  setState(() {
-    number++;
-  });
-}
- List<Widget> getData(int count){
 
-  List<Widget> data = [];
-    for(var i = 0 ;i<count;i++){
-        data.add(Text("รายการที่ ${i+1}"));
+  void addNumber() {
+    setState(() {
+      number++;
+    });
+  }
 
- }
- return data;
-}
+//เตรียมข้อมูล
+  List<Widget> getData(int count) {
+    List<Widget> data = [];
+    for (var i = 0; i < count; i++) {
+      data.add(Text(
+        "เมนูที่ ${i + 1}",
+        style: TextStyle(fontSize: 30),
+      ));
+    }
+    return data;
+  }
 }
