@@ -47,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (BuildContext context,int index) {
           FoodMenu food=menu[index];
           return ListTile(title: Text(food.name),
+          subtitle: Text("ราคา"+food.price+"บาท"),
           );
         }));
       }
