@@ -46,29 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(fontSize: 30),
         ),
       ),
-      body: Center(
-        child: ListView(
-          children: getData(20),
-        ),
-      ),
-    );
-  }
 
-  void addNumber() {
-    setState(() {
-      number++;
-    });
-  }
+      body: ListView.builder(
+        itemBuilder: (BuildContext context,int index) {
+          return ListTile(title: Text("เมนู $index"),);
+        }));
+      }
 
-//เตรียมข้อมูล
-  List<Widget> getData(int count) {
-    //text wiget
-    List<Widget> data = [];
-    for (var i = 0; i < count; i++) {
-      var menu = ListTile(title: Text("เมนูที่ ${i + 1}",style: TextStyle(fontSize: 25),),
-      subtitle: Text("เมนูที่อาหาร ${i + 1}"),);
-      data.add(menu);
-    }
-    return data;
-  }
+  
 }
