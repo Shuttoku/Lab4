@@ -67,20 +67,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+              SizedBox(height: 10,),
               //2
               Container(
                 padding: const EdgeInsets.all(20.0),
                 decoration: BoxDecoration(
                     color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(10)),
-                height: 100,
+                height: 80,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "รายรับ",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
@@ -97,19 +98,52 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-Container(
+                SizedBox(height: 10,),
+              //3
+              Container(
                 padding: const EdgeInsets.all(20.0),
                 decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(10)),
-                height: 100,
+                height: 60,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "รายจ่าย",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 15,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "60",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 10,),
+              //4
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 60,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "หนี้",
+                      style: TextStyle(
+                          fontSize: 15,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
